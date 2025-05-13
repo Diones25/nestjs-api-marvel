@@ -20,7 +20,7 @@ export class MarvelService {
     const publicKey = this.configService.get('MARVEL_PUBLIC_KEY');
 
     if (!privateKey || !publicKey) {
-      throw new BadRequestException('Marvel API keys are not configured');
+      throw new BadRequestException('As chaves da API da Marvel não estão configuradas');
     }
 
     return crypto
@@ -55,8 +55,8 @@ export class MarvelService {
           timeout: 10000, // 10 segundos de timeout
         }).pipe(
           catchError((error: AxiosError) => {
-            this.logger.error(`Marvel API request failed: ${error.message}`, error.stack);
-            throw new InternalServerErrorException(`Failed to fetch data from Marvel API: ${error.message}`);
+            this.logger.error(`Falha na solicitação da API da Marvel: ${error.message}`, error.stack);
+            throw new InternalServerErrorException(`Falha ao buscar dados da API da Marvel: ${error.message}`);
           })
         )
       );
@@ -64,7 +64,7 @@ export class MarvelService {
       return response.data;
     } catch (error) {
       this.logger.error(`Error in Marvel API request to ${url}: ${error.message}`);
-      throw new InternalServerErrorException(`Marvel API service unavailable: ${error.message}`);
+      throw new InternalServerErrorException(`Serviço de API da Marvel indisponível: ${error.message}`);
     }
   }
 
