@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "e3c4902b-786d-4548-894b-dc0d8fb87db3",
+		"name": "Marvel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15952256",
+		"_collection_link": "https://diones32.postman.co/workspace/Workspace-Diones~6db78dad-ecc5-419b-926f-36f6909bb4c5/collection/15952256-e3c4902b-786d-4548-894b-dc0d8fb87db3?action=share&source=collection_link&creator=15952256"
+	},
+	"item": [
+		{
+			"name": "getComics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/marvel/comics?limit=20&offset=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"marvel",
+						"comics"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getComicById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/marvel/comics/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"marvel",
+						"comics",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCreators",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/marvel/creators?limit=20&offset=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"marvel",
+						"creators"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCreatorsId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/marvel/creators/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"marvel",
+						"creators",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "12727"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSeries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/marvel/series?limit=20&offset=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"marvel",
+						"series"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSeriesId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/marvel/series/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"marvel",
+						"series",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6026"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/marvel/stories?limit=20&offset=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"marvel",
+						"stories"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStoriesId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/marvel/stories/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"marvel",
+						"stories",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
