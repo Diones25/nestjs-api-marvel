@@ -1,4 +1,4 @@
-![img](public/assets/img/marvel.jpg)
+![img](public/assets/img/Marvel_Logo.svg)
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
