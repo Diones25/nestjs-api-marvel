@@ -1,4 +1,4 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { MarvelService } from './marvel.service';
 
 @Controller('marvel')
@@ -8,5 +8,10 @@ export class MarvelController {
   @Get()
   async getComics(@Query('limit') limit: number, @Query('offset') offset: number) {
     return this.marvelService.getComics(limit, offset);
+  }
+
+  @Get(':id')
+  async getComicById(@Param('id') id: number) {
+    return this.marvelService.getComicById(id);
   }
 }
