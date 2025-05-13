@@ -34,4 +34,14 @@ export class MarvelController {
   async getSeriesId(@Param('id') id: number) {
     return this.marvelService.getSeriesId(id);
   }
+
+  @Get('stories')
+  async getStories(@Query('limit') limit: number, @Query('offset') offset: number) {
+    return this.marvelService.getStories(limit, offset);
+  }
+
+  @Get('stories/:id')
+  async getStoriesId(@Param('id') id: number) {
+    return this.marvelService.getStoriesId(id);
+  }
 }

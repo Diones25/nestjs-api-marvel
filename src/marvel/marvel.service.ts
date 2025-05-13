@@ -91,4 +91,12 @@ export class MarvelService {
   async getSeriesId(comicId: number): Promise<any> {
     return this.makeMarvelApiRequest(`/series/${comicId}`);
   }
+
+  async getStories(limit: number, offset: number): Promise<any> {
+    return this.makeMarvelApiRequest('/stories', { limit, offset });
+  }
+
+  async getStoriesId(comicId: number): Promise<any> {
+    return this.makeMarvelApiRequest(`/stories/${comicId}`);
+  }
 }
