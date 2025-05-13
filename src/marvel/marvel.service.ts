@@ -83,4 +83,12 @@ export class MarvelService {
   async getCreatorsId(comicId: number): Promise<any> {
     return this.makeMarvelApiRequest(`/creators/${comicId}`);
   }
+
+  async getSeries(limit: number, offset: number): Promise<any> {
+    return this.makeMarvelApiRequest('/series', { limit, offset });
+  }
+
+  async getSeriesId(comicId: number): Promise<any> {
+    return this.makeMarvelApiRequest(`/series/${comicId}`);
+  }
 }
