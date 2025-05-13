@@ -1,6 +1,6 @@
-<p align="center">
+
   <img src="public/assets/img/Marvel_Logo.svg" width="" alt="" />
-</p>
+
 
 ## Description
 
